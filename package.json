@@ -10,7 +10,9 @@
     "url": "http://beneb.info"
   },
   "scripts": {
-    "test": "tape test.js | tap-spec"
+    "test": "tape test.js | tap-spec",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": "ben-eb/gulp-uncss",
   "keywords": [
@@ -21,11 +23,13 @@
   "dependencies": {
     "gulp-util": "~3.0.6",
     "object-assign": "^4.0.1",
-    "uncss": "^0.14.1"
+    "uncss": "^0.14.1",
+    "snyk": "^1.319.0"
   },
   "devDependencies": {
     "tap-spec": "^4.1.0",
     "tape": "^4.2.0"
   },
-  "main": "index.js"
+  "main": "index.js",
+  "snyk": true
 }
